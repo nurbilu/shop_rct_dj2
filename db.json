@@ -1,0 +1,106 @@
+{
+  "prods": [
+    {
+      "id": "1",
+      "title": "radio",
+      "price": "$24.99",
+      "cat": 3
+    },
+    {
+      "title": "beanie hat",
+      "price": "14.99$",
+      "cat": "2",
+      "id": "2"
+    },
+    {
+      "title": "toy car",
+      "price": "$20",
+      "cat": "1",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "title": "pants",
+      "price": "$29.99",
+      "cat": 2
+    },
+    {
+      "id": "5",
+      "title": "phone",
+      "price": "$549.99",
+      "cat": 3
+    },
+    {
+      "id": "7",
+      "title": "drone",
+      "price": "$2999.99",
+      "cat": 1
+    },
+    {
+      "id": "8",
+      "title": "jacket",
+      "price": "$259.99",
+      "cat": 2
+    },
+    {
+      "id": "9",
+      "title": "game console",
+      "price": "$999.99",
+      "cat": 3
+    },
+    {
+      "id": "10",
+      "title": "smartwatch",
+      "price": "$439.99",
+      "cat": 1
+    },
+    {
+      "id": "11",
+      "title": "hat",
+      "price": "$79.99",
+      "cat": 2
+    },
+    {
+      "id": "12",
+      "title": "puzzle",
+      "price": "$39.79",
+      "cat": 3
+    },
+    {
+      "id": "13",
+      "title": "laptop",
+      "price": "$1299.99",
+      "cat": 1
+    },
+    {
+      "id": "14",
+      "title": "dress",
+      "price": "$449.99",
+      "cat": 2
+    },
+    {
+      "id": "15",
+      "title": "action figure",
+      "price": "$89.99",
+      "cat": 3
+    },
+    {
+      "id": "5818",
+      "title": "G.I.Joe",
+      "price": "12.99",
+      "cat": "1"
+    },
+    {
+      "id": "9be4",
+      "title": "pala",
+      "price": "2",
+      "cat": "1"
+    },
+    {
+      "id": "27ee",
+      "title": "yamake",
+      "price": "2.99$",
+      "cat": "2"
+    }
+  ]
+}
