@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const AllCtas = () => {
     let params = useParams();
-    const SERVER = "http://127.0.0.1:8000/prods"
+    const SERVER = "http://127.0.0.1:8000/products"
     const [prods, setprods] = useState([])
     const [title, settitle] = useState("")
     const [price, setprice] = useState("$")

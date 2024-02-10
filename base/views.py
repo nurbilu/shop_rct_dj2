@@ -79,26 +79,33 @@ def register(request):
     user.save()
     return Response("new user born")
 
+
+# add to CRUD later -when implementing login and authentication again
+# @permission_classes([IsAuthenticated])
+# @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+
 # CRUD 
+@api_view(['GET'])
+def list_products(request):
+    cat = request.GET.get('cat')
+    if cat:
+        products = list(Product.objects.filter(cat=cat).values())
+    else:
+        products = list(Product.objects.all().values())
+    return Response(products)
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
-@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def list_products(request):
     products = list(Product.objects.all().values())
     return Response(products)
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
-@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def add_product(request):
     data = request.data
     product = Product.objects.create(**data)
-    return Response({"id": product.id, "title": product.title, "price": product.price, "category": product.category})
+    return Response({"id": product.id, "title": product.title, "price": product.price, "category": product.cat})
 
 @api_view(['DELETE'])
-@permission_classes([IsAuthenticated])
-@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def delete_product(request, id):
     try:
         product = Product.objects.get(id=id)
@@ -108,8 +115,6 @@ def delete_product(request, id):
         return Response({'error': 'Product not found'}, status=404)
 
 @api_view(['PUT'])
-@permission_classes([IsAuthenticated])
-@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def update_product(request, id):
     data = request.data
     try:
